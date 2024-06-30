@@ -1,0 +1,79 @@
+ users
+
+ db.users.insertMany([
+    {"user_id":1,"username":"sathiya","email":"sathi@abc.com","batch":"weekday"},
+    {"user_id":2,"username":"jagan","email":"jagan@abc.com","batch":"weekday"},
+    {"user_id":3,"username":"devi","email":"devi@xyz.com","batch":"weekend"},
+    {"user_id":4,"username":"robert","email":"robert@cde.com","batch":"weekend"},
+    {"user_id":5,"username":"amudha","email":"amudha@abc.com","batch":"weekday"}
+ ]);
+
+
+ codekata
+
+ db.codekata.insertMany([
+    {"user_id":1,"num_of_problems":100,"completed":80,"pending":20, "status":"incomplete"},
+    {"user_id":2,"num_of_problems":100,"completed":58,"pending":42, "status":"incomplete"},
+    {"user_id":3,"num_of_problems":100,"completed":100,"pending":0, "status":"complete"},
+    {"user_id":4,"num_of_problems":100,"completed":91,"pending":9, "status":"incomplete"},
+    {"user_id":5,"num_of_problems":100,"completed":100,"pending":0, "status":"complete"},
+ ]);
+
+ mentors
+
+ db.mentors.insertMany([
+    {"mentor_id":1,"mentor_name":"venkat","mentees":25},
+    {"mentor_id":2,"mentor_name":"bharat","mentees":14},
+    {"mentor_id":3,"mentor_name":"lakshmi","mentees":10},
+    {"mentor_id":4,"mentor_name":"aarthi","mentees":20},
+    {"mentor_id":5,"mentor_name":"shiva","mentees":15},
+    {"mentor_id":6,"mentor_name":"guru","mentees":18},
+    {"mentor_id":7,"mentor_name":"renuka","mentees":12},
+ ]);
+
+
+ topics
+
+ db.topics.insertMany([
+    {"topic_id":1, "topic_name":"HTML","topic_date":"2020-09-20","mentor_id":3},
+    {"topic_id":2, "topic_name":"CSS","topic_date":"2020-09-30","mentor_id":1},
+    {"topic_id":3, "topic_name":"JavaScript","topic_date":"2020-10-05","mentor_id":2},
+    {"topic_id":4, "topic_name":"React","topic_date":"2020-10-10","mentor_id":7},
+    {"topic_id":5, "topic_name":"NodeJs","topic_date":"2020-10-20","mentor_id":4},
+    {"topic_id":6, "topic_name":"MySql","topic_date":"2020-10-30","mentor_id":5},
+    {"topic_id":7, "topic_name":"MongoDB","topic_date":"2020-11-10","mentor_id":6},
+ ]);
+
+tasks
+
+db.tasks.insertMany([
+    {"task_id":1 ,"task_name":"HTML Form Creation" ,"topic_id":1 ,"submission_date":"2020-09-25", "users_completed":[{userId:1},{userId:3},{userId:5}]},
+    {"task_id":2 ,"task_name":"CSS Calculator" ,"topic_id":2 ,"submission_date":"2020-10-05", "users_completed":[{userId:2},{userId:4},{userId:5}]},
+    {"task_id":3 ,"task_name":"DOM Manipulation" ,"topic_id":3 ,"submission_date":"2020-10-10", "users_completed":[{userId:1},{userId:2},{userId:3},{userId:5}]},
+    {"task_id":4 ,"task_name":"React Router" ,"topic_id":4 ,"submission_date":"2020-10-15", "users_completed":[{userId:2},{userId:4}]},
+    {"task_id":5 ,"task_name":"Create Express server" ,"topic_id":5 ,"submission_date":"2020-10-25", "users_completed":[{userId:1},{userId:5}]},
+    {"task_id":6 ,"task_name":"Aggregate queries" ,"topic_id":6 ,"submission_date":"2020-11-05", "users_completed":[{userId:1},{userId:2},{userId:4}]},
+    {"task_id":7 ,"task_name":"CRUD operations using MongoShell" ,"topic_id":7 ,"submission_date":"2020-11-15", "users_completed":[{userId:1},{userId:3},{userId:4},{userId:5}]}
+]);
+
+attendance
+
+db.attendance.insertMany([
+    {"topic_id":1, "attended":[{userId:1},{userId:2},{userId:3},{userId:4},{userId:5}]},
+    {"topic_id":2, "attended":[{userId:1},{userId:2},{userId:3},{userId:4},{userId:5}]},
+    {"topic_id":3, "attended":[{userId:1},{userId:3},{userId:4},{userId:5}]},
+    {"topic_id":4, "attended":[{userId:1},{userId:2},{userId:3},{userId:4}]},
+    {"topic_id":5, "attended":[{userId:1},{userId:2},{userId:3},{userId:5}]},
+    {"topic_id":6, "attended":[{userId:2},{userId:3},{userId:4},{userId:5}]},
+    {"topic_id":7, "attended":[{userId:1},{userId:3},{userId:5}]}
+]);
+
+company drives
+
+db.companyDrives.insertMany([
+    {"company_name":"Zoho","drive_date":"2020-10-05", "attended":[{userId:1},{userId:2},{userId:3}]},
+    {"company_name":"Paypal","drive_date":"2020-10-15", "attended":[{userId:1},{userId:2},{userId:4}]},
+    {"company_name":"Symantec","drive_date":"2020-10-25", "attended":[{userId:1},{userId:4}]},
+    {"company_name":"Amazon","drive_date":"2020-10-29", "attended":[{userId:2},{userId:5}]},
+    {"company_name":"Facebook","drive_date":"2020-11-04", "attended":[{userId:1},{userId:4},{userId:5}]}
+]);
